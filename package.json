@@ -2,7 +2,7 @@
   "name": "react-team-project-pro-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://OleksandrDomanskyi.github.io/react-team-project-pro-test/",
+  "homepage": "https://oleksandrdomanskyi.github.io/react-team-project-pro-test/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.4",
