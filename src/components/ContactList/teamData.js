@@ -3,7 +3,7 @@
 const teamData = [
     {
         id:0,
-        img:'',
+        // img:'',
         name:'Oleksandr Domanskii',
         role:'Team lead',
         social: {
@@ -16,7 +16,7 @@ const teamData = [
 
     {
         id:1,
-        img:'',
+        // img:'',
         name:'Bohdan Radchuk',
         role:'Team lead',
         social: {
@@ -29,7 +29,7 @@ const teamData = [
 
     {
         id:2,
-        img:'',
+        // img:'',
         name:'Ulyana Khomenko',
         role:'Front-End developer',
         social: {
@@ -75,13 +75,13 @@ const teamData = [
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:',
+            mail:'mailto:mvecheruk@gmail.com',
         },
     },
 
     {
         id:6,
-        img:'',
+        // img:'',
         name:'Volodymyr Rubakha',
         role:'Front-End developer',
         social: {
@@ -93,3 +93,5 @@ const teamData = [
     }
 
 ]
+
+export default teamData;
