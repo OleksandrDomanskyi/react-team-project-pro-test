@@ -3,6 +3,7 @@ import MyRoutes from './Routes';
 import Footer from './components/Footer/Footer';
 
 import './App.scss';
+import './sass/main.scss'
 
 function App() {
   return (

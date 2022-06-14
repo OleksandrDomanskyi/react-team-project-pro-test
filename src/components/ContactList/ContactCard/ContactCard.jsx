@@ -1,6 +1,6 @@
 const ContactCard = () => {
     return (
-        <></>
+        <div>Team Card</div>
     )
 };
 
