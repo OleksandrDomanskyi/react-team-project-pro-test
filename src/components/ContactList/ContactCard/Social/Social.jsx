@@ -9,8 +9,8 @@ const Social = ({ social: { github, linkedin, mail } }) => {
           <Icon
             className={s.icon}
             name="icon-github"
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             color={"#000"}
           />
         </a>
@@ -20,8 +20,8 @@ const Social = ({ social: { github, linkedin, mail } }) => {
           <Icon
             className={s.icon}
             name="icon-linkedin"
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             color={"#000"}
           />
         </a>
@@ -31,8 +31,8 @@ const Social = ({ social: { github, linkedin, mail } }) => {
           <Icon
             className={s.icon}
             name="icon-mail"
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             color={"#000"}
           />
         </a>

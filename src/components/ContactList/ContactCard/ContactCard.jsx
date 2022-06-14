@@ -11,8 +11,10 @@ const ContactCard = ({ img = defaultIMG, name, role, social }) => {
       <ul className={s.list}>
         <li className={s.name}>{name}</li>
         <li className={s.role}>{role}</li>
+        <li className={s.social}>
+          <Social social={social} />
+        </li>
       </ul>
-      <Social social={social} />
     </div>
   );
 };

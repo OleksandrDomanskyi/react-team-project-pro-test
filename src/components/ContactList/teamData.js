@@ -42,7 +42,7 @@ const teamData = [
 
     {
         id:3,
-        img:'',
+        // img:'',
         name:"Oleksii Kikot",
         role:'Front-End developer',
         social: {
@@ -55,7 +55,7 @@ const teamData = [
 
     {
         id:4,
-        img:'',
+        // img:'',
         name:'Anna Moldovan',
         role:'Front-End developer',
         social: {
@@ -68,7 +68,7 @@ const teamData = [
 
     {
         id:5,
-        img:'',
+        // img:'',
         name:'Myroslav Vecheruk',
         role:'Front-End developer',
         social: {
