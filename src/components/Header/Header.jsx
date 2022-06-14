@@ -4,23 +4,25 @@ import NavBarMenu from "./NavBarMenu/NavBarMenu";
 
 import styles from "./header.module.scss";
 import UserMenu from "./UserMenu/UserMenu";
-
 import Icon from "../../shared/components/Icon";
+import BurgerButton from "../../shared/components/BurgerButton/BurgerButton";
+import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
 
 const Header = () => {
+  const { width } = useWindowDimensions();
+
   return (
-    <header className={styles.menu}>
+    <header className={styles.headerContainer}>
       <Link to="/">
         <Icon
           name={"icon-logo"}
-          color={"black"}
+          color={"var(--main-black-color)"}
           width={"130px"}
           height={"30px"}
         />
       </Link>
 
-      <NavBarMenu />
-      <UserMenu />
+      {width < 768 ? <BurgerButton /> : <NavBarMenu />}
     </header>
   );
 };
