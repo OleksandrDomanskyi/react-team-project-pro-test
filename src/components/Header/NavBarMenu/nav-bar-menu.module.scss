@@ -1,0 +1,28 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: grey;
+    margin-bottom: 30px;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 25px 20px;
+    background-color: black;
+    color: orange;
+    font-weight: bold;
+    font-size: 24px;
+
+    &:hover {
+        background-color: green;
+    }
+}
+
+.linkActive {
+    color: orange;
+    border-bottom: 2px solid red;
+    background-color: green;
+}
