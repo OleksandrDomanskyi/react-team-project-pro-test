@@ -1,10 +1,10 @@
-import Home from "../../components/Home";
+import SelectTest from "../../components/SelectTest";
 
 const HomePage = () => {
     return (
         <div>
             <h2>Wellcome</h2>
-            <Home />
+            <SelectTest />
         </div>
     )
 };
