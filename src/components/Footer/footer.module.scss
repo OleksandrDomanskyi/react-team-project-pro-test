@@ -1,0 +1,46 @@
+@import '../../sass/main.scss';
+
+footer {
+    padding: 10px 0;
+
+    font-weight: 400;
+    font-size: 10px;
+    line-height: (12px/10px);
+    letter-spacing: 0.03em;
+
+    color: var(--footer-text-color);
+    background-color: var(--footer-background-color);
+
+    @include tablet {
+        font-size: 12px;
+        line-height: (15px/12px);
+        padding: 19px 0;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text {
+    margin-left: 4px;
+}
+
+.link {
+    color: var(--footer-text-color);
+
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.item {
+    color: var(--accent-color);
+}
+
+.contacts {
+    color: inherit;
+}
