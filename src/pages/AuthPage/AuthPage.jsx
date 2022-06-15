@@ -1,8 +1,22 @@
+import { useDispatch } from 'react-redux';
+import { login, signup } from '../../redux/auth/auth-operations';
+
 import AuthForm from "../../components/AuthForm";
 
 import styles from './authPage.module.scss'
 
 const AuthPage = () => {
+     const dispatch = useDispatch();
+
+    const onSubmit = (data, type) => {
+        if (type === 'signup') {
+            return dispatch(signup(data))
+        } 
+
+        if (type === 'login') {
+            return dispatch(login(data))
+        }
+    }
 
     return (
         <main>
@@ -16,7 +30,7 @@ const AuthPage = () => {
                             learning process more diverse_ <span className={styles.bold}>&#93;</span>;
                         </p>
                     </div>
-                    <AuthForm />
+                    <AuthForm onSubmit={onSubmit}/>
                 </div>
             </section>
         </main>

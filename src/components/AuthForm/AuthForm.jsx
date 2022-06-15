@@ -1,9 +1,30 @@
+import { useState } from "react";
 
+import { initialState } from './initialState';
 import styles from './authForm.module.scss'
 
-const AuthForm = () => {
+const AuthForm = ({ onSubmit }) => {
+    const [submitType, setSubmitType] = useState(null)
+    const [form, setForm] = useState({...initialState});
+
+    const handleChange = ({target}) => {
+        const {name, value} = target;
+        setForm(prevForm => ({
+            ...prevForm,
+            [name]: value
+        }))
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit({...form}, submitType);
+        setForm({...initialState});
+    }
+
+    const {email, password} = form;
+
     return (
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit}>
 
                 <p className={styles.text}>You can use your Google Account to authorize:</p>
 
@@ -18,8 +39,8 @@ const AuthForm = () => {
                             id="email"
                             name="email"
                             type="email"
-                            // value={email}
-                            // onChange={handleChange}
+                            value={email}
+                            onChange={handleChange}
                             required
                             placeholder="E-mail" />
                     </div>
@@ -29,8 +50,8 @@ const AuthForm = () => {
                             id="password"
                             name="password"
                             type="password"
-                            // value={password}
-                            // onChange={handleChange}
+                            value={password}
+                            onChange={handleChange}
                             required
                             placeholder="Password"
                         />
@@ -38,8 +59,8 @@ const AuthForm = () => {
                 </div>
 
                 <div className={styles.buttons}>
-                    <button type='button' className={styles.signButtonActive}> <span className={styles.sign}>sign in</span> </button>
-                    <button type='button' className={styles.signButton}> <span className={styles.sign}>sign up</span> </button>
+                    <button onClick={() => setSubmitType('login')} type='submit' className={styles.signButtonActive}> <span className={styles.sign}>sign in</span> </button>
+                    <button  onClick={() => setSubmitType('signup')} type='submit' className={styles.signButton}> <span className={styles.sign}>sign up</span> </button>
                 </div>
 
             </form>
