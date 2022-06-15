@@ -1,0 +1,55 @@
+@import "../../../../sass/main.scss";
+
+.logoutBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  @include tablet {
+    &::before {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      display: block;
+      height: 74px;
+      width: 1px;
+      background-color: var(--border-color);
+      right: 60px;
+      top: 0px;
+
+      margin-right: 10px;
+    }
+  }
+  @include desktop {
+    &::before {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      display: block;
+      height: 74px;
+      width: 1px;
+      background-color: var(--border-color);
+      right: 40px;
+      top: 0px;
+
+      margin-right: 10px;
+    }
+  }
+}
+.icon {
+  fill: var(--main-black-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  transition: all 250ms ease-in-out;
+}
+
+.controlItems {
+  display: flex;
+  align-items: center;
+}

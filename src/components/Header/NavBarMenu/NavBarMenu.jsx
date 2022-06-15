@@ -1,21 +1,29 @@
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
+import Icon from "../../../shared/components/Icon";
+import useWindowDimensions from "../../../shared/hooks/useWindowDimensions";
 import { items } from "./items";
 
 import styles from "./nav-bar-menu.module.scss";
-import Icon from "../../../shared/components/Icon";
 
 const getActiveLink = ({ isActive }) => {
   return isActive ? `${styles.link} ${styles.linkActive}` : `${styles.link}`;
 };
 
-const NavBarMenu = ({ toggleNavbar }) => {
-  const isLogin = false;
+const NavBarMenu = ({ toggleNavbar, isLogin }) => {
+  const { width } = useWindowDimensions();
+  const isMobile = width < 768;
+
   const privateItems = items.filter((item) => item.private === isLogin);
+
   const validItems = isLogin ? items : privateItems;
 
   const closeMenu = () => {
-    toggleNavbar();
+    if (isMobile) {
+      toggleNavbar();
+    }
+    return;
   };
 
   const elements = validItems.map(({ id, to, text }) => (
@@ -30,13 +38,13 @@ const NavBarMenu = ({ toggleNavbar }) => {
     <nav className={styles.navMenu}>
       <ul className={styles.navMenuList} onClick={closeMenu}>
         {elements}
-        {isLogin && (
+        {isLogin && isMobile && (
           <li className={styles.navMenuItemIcon}>
             <Icon
               name="icon-sign-out"
               width={16}
               height={16}
-              color={"var(--accent-color)"}
+              className={styles.icon}
             />
           </li>
         )}
@@ -46,3 +54,8 @@ const NavBarMenu = ({ toggleNavbar }) => {
 };
 
 export default NavBarMenu;
+
+NavBarMenu.propTypes = {
+  toggleNavbar: PropTypes.func.isRequired,
+  isLogin: PropTypes.bool.isRequired,
+};

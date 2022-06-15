@@ -18,36 +18,50 @@
     display: flex;
     justify-content: space-between;
   }
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navMenu {
   @include tablet {
+    margin-right: 40px;
+  }
+  @include desktop {
+    margin-right: 80px;
   }
 }
 
 .navMenuItem {
+  display: grid;
+  place-items: center;
   @include mobile {
     padding: 28px;
-
-    border-bottom: 1px solid var(--border-color);
   }
   @include tablet {
     &:not(:last-child) {
       margin-right: 60px;
-      display: flex;
-      align-items: center;
+    }
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 80px;
     }
   }
 }
 
 .link {
   font-size: 14px;
-  line-height: 16px / 14;
+  line-height: 1.33;
   color: var(--main-black-color);
   letter-spacing: 0.02em;
-  padding: 4px 0;
-
+  padding: 2px 0;
   position: relative;
+
+  @include tablet {
+    font-size: 12px;
+  }
 
   &:after {
     content: "";
@@ -63,16 +77,15 @@
     @include tablet {
       transition: transform 0.3s;
     }
+    @include desktop {
+      transition: transform 0.3s;
+    }
   }
 
   &:hover {
     &:after {
       transform: scaleX(1);
     }
-  }
-
-  @include tablet {
-    font-size: 12px;
   }
 }
 
@@ -92,5 +105,11 @@
   @include tablet {
     padding: 32px;
     border-left: 1px solid var(--border-color);
+  }
+}
+
+.icon {
+  &:hover {
+    fill: var(--accent-color);
   }
 }

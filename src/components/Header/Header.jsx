@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import NavBarMenu from "./NavBarMenu";
-import UserMenu from "./UserMenu/UserMenu";
-import BurgerMenu from "../../shared/components/BurgerMenu";
+import MobileNavbar from "../../shared/components/Navbar/MobileNavbar";
+import ExpandedNavbar from "../../shared/components/Navbar/ExpandedNavbar/ExpandedNavbar";
 
 import Icon from "../../shared/components/Icon";
 import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
@@ -12,7 +12,6 @@ import styles from "./header.module.scss";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const isLogin = true;
 
   const toggleMenu = () => {
     return setNavbarOpen((prev) => !prev);
@@ -20,27 +19,34 @@ const Header = () => {
 
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const isLogin = false;
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.wrapper}>
-        <Link to="/">
-          <Icon
-            name={"icon-logo"}
-            color={"var(--main-black-color)"}
-            width={130}
-            height={30}
-          />
-        </Link>
+        <div>
+          <Link
+            to="/"
+            className={styles.logo}
+            onClick={() => setNavbarOpen(false)}
+          >
+            <Icon name={"icon-logo"} width={130} height={30} />
+          </Link>
+        </div>
 
-        {isLogin && <UserMenu />}
-        {isMobile ? (
-          <BurgerMenu isOpen={navbarOpen} onClick={toggleMenu} />
-        ) : (
-          <NavBarMenu />
+        {!isMobile && <ExpandedNavbar isLogin={isLogin} isMobile={isMobile} />}
+
+        {isMobile && (
+          <MobileNavbar
+            isLogin={isLogin}
+            isOpen={navbarOpen}
+            toggleNavbar={toggleMenu}
+          />
         )}
       </div>
-      {navbarOpen && isMobile && <NavBarMenu toggleNavbar={toggleMenu} />}
+      {navbarOpen && isMobile && (
+        <NavBarMenu toggleNavbar={toggleMenu} isLogin={isLogin} />
+      )}
     </header>
   );
 };
