@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { initialState } from './initialState';
-import styles from './authForm.module.scss'
+import styles from './auth-form.module.scss'
 
 const AuthForm = ({ onSubmit }) => {
     const [submitType, setSubmitType] = useState(null)

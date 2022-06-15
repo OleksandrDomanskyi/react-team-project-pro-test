@@ -1,12 +1,25 @@
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 import { login, signup } from '../../redux/auth/auth-operations';
 
 import AuthForm from "../../components/AuthForm";
+import useLogin from "../../shared/hooks/useLogin";
 
-import styles from './authPage.module.scss'
+import styles from './auth-page.module.scss'
 
 const AuthPage = () => {
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const isLogin = useLogin();
+    
+    useEffect(() => {
+        if (isLogin) {
+            navigate('/');
+        }
+    }, [isLogin, navigate]);
 
     const onSubmit = (data, type) => {
         if (type === 'signup') {
