@@ -10,7 +10,7 @@ const teamData = [
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:',
+            mail:'mailto:domanskyioleksandr@gmail.com',
         },
     },
 
@@ -36,7 +36,7 @@ const teamData = [
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:oleksii.kikot@yahoo.com',
+            mail:'mailto:ulianakhomenko@gmail.com',
         },
     },
 
