@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import NavBarMenu from "./NavBarMenu/NavBarMenu";
+import NavBarMenu from "./NavBarMenu";
 
 import styles from "./header.module.scss";
 import UserMenu from "./UserMenu/UserMenu";
 import Icon from "../../shared/components/Icon";
-import BurgerButton from "../../shared/components/BurgerButton/BurgerButton";
+import BurgerMenu from "../../shared/components/BurgerMenu";
 import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
         />
       </Link>
 
-      {width < 768 ? <BurgerButton /> : <NavBarMenu />}
+      {width < 768 ? <BurgerMenu /> : <NavBarMenu />}
     </header>
   );
 };

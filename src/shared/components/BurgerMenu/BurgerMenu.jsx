@@ -1,6 +1,6 @@
 import Icon from "../Icon";
 
-const BurgerButton = () => {
+const BurgerMenu = () => {
   return (
     <button type="button">
       <Icon
@@ -13,4 +13,4 @@ const BurgerButton = () => {
   );
 };
 
-export default BurgerButton;
+export default BurgerMenu;
