@@ -1,11 +1,20 @@
+@import "../../sass/main.scss";
+
 .headerContainer {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 20px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    border-bottom: 1px solid var(--border-color);
+  padding-left: 20px;
+  border-bottom: 1px solid var(--border-color);
+
+  @include tablet {
+    padding: 21px 32px;
+  }
 }
