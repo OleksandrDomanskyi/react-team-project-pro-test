@@ -7,8 +7,8 @@ const ContactList = () => {
     <ContactCard key={contact.id} {...contact} />
   ));
   return (
-    <section className={s.section}>
-      <p className={s.title}></p>
+    <section className="container">
+      <h2 className={s.title}>Our Team</h2>
       <div className={s.list}>{elements}</div>
     </section>
   );

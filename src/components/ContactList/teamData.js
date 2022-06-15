@@ -18,12 +18,12 @@ const teamData = [
         id:1,
         // img:'',
         name:'Bohdan Radchuk',
-        role:'Team lead',
+        role:'Scrum master',
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:',
+            mail:'mailto:radchukyou1999@gmail.com',
         },
     },
 
@@ -36,7 +36,7 @@ const teamData = [
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:',
+            mail:'mailto:oleksii.kikot@yahoo.com',
         },
     },
 
@@ -49,7 +49,7 @@ const teamData = [
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/',
             telegram:'https://t.me/',
-            mail:'mailto:',
+            mail:'mailto:oleksii.kikot@yahoo.com',
         },
     },
 
