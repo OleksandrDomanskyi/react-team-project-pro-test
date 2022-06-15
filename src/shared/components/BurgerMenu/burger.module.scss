@@ -1,9 +1,26 @@
 .burgerBtn {
   display: block;
   border: none;
-  padding: 25px 20px;
+  position: relative;
 
   cursor: pointer;
   background-color: transparent;
-  border-left: 1px solid var(--border-color);
+
+  &::before {
+    content: "";
+    position: fixed;
+    pointer-events: none;
+    display: block;
+    height: 74px;
+    width: 1px;
+    background-color: var(--border-color);
+    right: 60px;
+    top: 0px;
+  }
+}
+
+.burger {
+  &:hover {
+    fill: var(--accent-color);
+  }
 }

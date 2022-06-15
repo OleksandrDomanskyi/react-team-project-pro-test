@@ -9,16 +9,16 @@ const BurgerMenu = ({ isOpen, onClick }) => {
       {isOpen ? (
         <Icon
           name={"icon-close"}
-          width={"26px"}
-          height={"26px"}
-          color={"var(--main-black-color)"}
+          width={"20px"}
+          height={"20px"}
+          className={styles.burger}
         />
       ) : (
         <Icon
           name={"icon-burger"}
-          color={"var(--main-black-color)"}
-          width={"26px"}
-          height={"26px"}
+          width={"20px"}
+          height={"20px"}
+          className={styles.burger}
         />
       )}
     </button>

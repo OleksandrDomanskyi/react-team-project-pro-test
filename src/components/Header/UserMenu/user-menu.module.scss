@@ -1,7 +1,19 @@
+@import "../../../sass/main.scss";
+
 .userWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-right: 40px;
+  margin-left: auto;
+}
+
+.userWrapperName {
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  line-height: 1.33;
   text-transform: capitalize;
 
   width: 30px;
@@ -9,10 +21,14 @@
 
   background-color: white;
   border-radius: 50%;
-  margin-left: 60px;
+  box-shadow: 0px 1px 1px 0px #121d2e1a;
 }
 
-.userWrapperName {
-  padding: 20px;
+.fullName {
+  margin-left: 10px;
   font-size: 12px;
+  line-height: 1.33;
+  @include desktop {
+    margin-left: 20px;
+  }
 }
