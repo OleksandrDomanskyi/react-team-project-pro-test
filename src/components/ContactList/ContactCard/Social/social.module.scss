@@ -1,0 +1,15 @@
+    .list {
+        display: flex;
+    }
+    
+    .item {
+    
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    .icon:hover,
+    .icon:active {
+        fill: #FF6B09;
+    }

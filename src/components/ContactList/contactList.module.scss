@@ -1,0 +1,37 @@
+@import '../../sass/main.scss';
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 42px;
+    margin-bottom: 34px;
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 130px;
+        height: 1px;
+        background-color: rgba(0, 18, 47, 0.15);
+        top: 14px;
+        transform: translateY(-50%);
+        position: relative;
+    }
+    @include tablet {
+        font-size: 22px;
+        margin-bottom: 60px;
+        &::after {
+            width: 322px;
+            top: 20px;
+        }  
+    }
+}
