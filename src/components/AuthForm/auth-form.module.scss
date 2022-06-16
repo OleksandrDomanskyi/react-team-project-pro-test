@@ -33,6 +33,8 @@
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.02em;
+
+  margin-left: 10px;
 }
 
 .GoogleButton {
@@ -40,6 +42,9 @@
   background-color: #fafafa;
   margin: 32px 0;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
 
   padding: 17px 38px;
 
