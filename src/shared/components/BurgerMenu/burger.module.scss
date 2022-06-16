@@ -2,20 +2,21 @@
   display: block;
   border: none;
   position: relative;
+  fill: var(--text-color);
 
   cursor: pointer;
   background-color: transparent;
 
   &::before {
     content: "";
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     display: block;
-    height: 74px;
+    height: 72px;
     width: 1px;
     background-color: var(--border-color);
-    right: 60px;
-    top: 0px;
+    right: 35px;
+    top: -24px;
   }
 }
 

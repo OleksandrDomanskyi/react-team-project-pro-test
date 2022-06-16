@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Icon from "../../../shared/components/Icon";
 import useWindowDimensions from "../../../shared/hooks/useWindowDimensions";
+import useLogin from "../../../shared/hooks/useLogin";
 import { items } from "./items";
 
 import styles from "./nav-bar-menu.module.scss";
@@ -11,9 +12,11 @@ const getActiveLink = ({ isActive }) => {
   return isActive ? `${styles.link} ${styles.linkActive}` : `${styles.link}`;
 };
 
-const NavBarMenu = ({ toggleNavbar, isLogin }) => {
+const NavBarMenu = ({ toggleNavbar }) => {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+
+  const isLogin = useLogin();
 
   const privateItems = items.filter((item) => item.private === isLogin);
 
@@ -55,7 +58,10 @@ const NavBarMenu = ({ toggleNavbar, isLogin }) => {
 
 export default NavBarMenu;
 
+NavBarMenu.defaultProps = {
+  toggleNavbar: () => {},
+};
+
 NavBarMenu.propTypes = {
   toggleNavbar: PropTypes.func.isRequired,
-  isLogin: PropTypes.bool.isRequired,
 };

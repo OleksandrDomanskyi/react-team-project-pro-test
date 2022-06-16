@@ -7,11 +7,18 @@
 
   margin-right: 40px;
   margin-left: auto;
+  @include tablet {
+    margin-left: 60px;
+  }
+  @include desktop {
+    margin-left: 80px;
+  }
 }
 
-.userWrapperName {
+.userName {
   display: grid;
   place-items: center;
+  color: black;
   font-size: 12px;
   line-height: 1.33;
   text-transform: capitalize;
@@ -25,6 +32,7 @@
 }
 
 .fullName {
+  color: var(--main-black-color);
   margin-left: 10px;
   font-size: 12px;
   line-height: 1.33;
