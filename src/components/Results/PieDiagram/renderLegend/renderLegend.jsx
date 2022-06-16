@@ -30,7 +30,7 @@ const renderLegend = (props) => {
                 ></path>
               </g>
             </svg>
-            <span className="item-color" className="recharts-legend-item-text ">
+            <span className="item-color recharts-legend-item-text" >
               {entry.value}
             </span>
           </li>
