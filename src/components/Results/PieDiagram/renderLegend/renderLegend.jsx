@@ -4,7 +4,7 @@ const renderLegend = (props) => {
   const { payload } = props;
 
   return (
-    <ul className="recharts-default-legend">
+    <ul className="legend recharts-default-legend">
       {payload.map((entry, index) => {
         return (
           <li style={{ textAlign: "left" }} key={`item-${index}`}>

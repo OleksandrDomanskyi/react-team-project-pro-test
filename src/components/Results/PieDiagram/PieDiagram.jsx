@@ -1,14 +1,6 @@
 import React from "react";
 import renderLegend from "./renderLegend/renderLegend.jsx";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  LabelList,
-  Label,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Cell, Legend } from "recharts";
 import "./PieDiagram.scss";
 
 const App = () => {
@@ -28,11 +20,11 @@ const App = () => {
   return (
     <PieChart
       align="center"
-      width={window.innerWidth - 30}
+      width={window.innerWidth > 768 ? 600 : 258}
       height={diagramSize().pieChartHeight}
     >
       <Legend
-        margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
+        className="legend"
         width={55}
         iconType="square"
         iconSize="14px"
