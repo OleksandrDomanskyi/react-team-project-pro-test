@@ -28,7 +28,9 @@ const AuthForm = ({ onSubmit }) => {
 
                 <p className={styles.text}>You can use your Google Account to authorize:</p>
 
-                <button type='button' className={styles.GoogleButton}> <span className={styles.Google}>Google</span> </button>
+                <button type='button' className={styles.GoogleButton}>
+                    <span className={styles.Google}>Google</span>
+                </button>
                 
                 <p className={styles.text}>Or login to our app using e-mail and password:</p>
 
