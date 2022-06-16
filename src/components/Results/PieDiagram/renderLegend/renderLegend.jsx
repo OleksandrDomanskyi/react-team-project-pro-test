@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const renderLegend = (props) => {
   const { payload } = props;
 
@@ -5,12 +7,12 @@ const renderLegend = (props) => {
     <ul className="recharts-default-legend">
       {payload.map((entry, index) => {
         return (
-          <li style={{ "text-align": "left" }} key={`item-${index}`}>
+          <li style={{ textAlign: "left" }} key={`item-${index}`}>
             <svg
               style={{
                 display: "inline-block",
-                "vertical-align": "middle",
-                "margin-right": "4px",
+                verticalAlign: "middle",
+                marginRight: "4px",
               }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -22,13 +24,13 @@ const renderLegend = (props) => {
                   cx="16"
                   cy="16"
                   type="square"
-                  class="recharts-symbols"
+                  className="recharts-symbols"
                   transform="translate(16, 16)"
                   d="M-16,-16h32v32h-32Z"
                 ></path>
               </g>
             </svg>
-            <span className="item-color" class="recharts-legend-item-text ">
+            <span className="item-color" className="recharts-legend-item-text ">
               {entry.value}
             </span>
           </li>
@@ -38,3 +40,6 @@ const renderLegend = (props) => {
   );
 };
 export default renderLegend;
+renderLegend.propTypes = {
+  payload: PropTypes.array.isRequired,
+};
