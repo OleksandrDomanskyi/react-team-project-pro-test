@@ -11,10 +11,10 @@
   @include tablet {
     &::before {
       content: "";
-      position: fixed;
+      position: absolute;
       pointer-events: none;
       display: block;
-      height: 74px;
+      height: 72px;
       width: 1px;
       background-color: var(--border-color);
       right: 60px;
@@ -26,10 +26,10 @@
   @include desktop {
     &::before {
       content: "";
-      position: fixed;
+      position: absolute;
       pointer-events: none;
       display: block;
-      height: 74px;
+      height: 72px;
       width: 1px;
       background-color: var(--border-color);
       right: 40px;

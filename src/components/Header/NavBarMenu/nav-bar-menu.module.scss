@@ -6,7 +6,7 @@
     position: fixed;
     background-color: var(--backgound-color-main);
     left: 0;
-    top: 90px;
+    top: 75px;
     bottom: 0;
     height: 100vh;
     width: 100%;
@@ -25,12 +25,7 @@
 }
 
 .navMenu {
-  @include tablet {
-    margin-right: 40px;
-  }
-  @include desktop {
-    margin-right: 80px;
-  }
+  margin: 0 auto;
 }
 
 .navMenuItem {
@@ -38,14 +33,14 @@
   place-items: center;
   @include mobile {
     padding: 28px;
+    border-bottom: 1px solid var(--border-color);
   }
-  @include tablet {
-    &:not(:last-child) {
-      margin-right: 60px;
+
+  &:not(:last-child) {
+    @include tablet {
+      margin-right: 40px;
     }
-  }
-  @include desktop {
-    &:not(:last-child) {
+    @include desktop {
       margin-right: 80px;
     }
   }
@@ -97,6 +92,8 @@
 }
 
 .navMenuItemIcon {
+  display: grid;
+  place-items: center;
   @include mobile {
     padding: 28px;
 
@@ -109,6 +106,7 @@
 }
 
 .icon {
+  fill: var(--text-color);
   &:hover {
     fill: var(--accent-color);
   }
