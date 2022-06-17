@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-import useLogin from "shared/hooks/useLogin";
+import useLogin from "../../../shared/hooks/useLogin";
 
 const PublicRoute = () => {
 

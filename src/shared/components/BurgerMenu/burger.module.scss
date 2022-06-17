@@ -1,0 +1,27 @@
+.burgerBtn {
+  display: block;
+  border: none;
+  position: relative;
+  fill: var(--text-color);
+
+  cursor: pointer;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    height: 72px;
+    width: 1px;
+    background-color: var(--border-color);
+    right: 35px;
+    top: -24px;
+  }
+}
+
+.burger {
+  &:hover {
+    fill: var(--accent-color);
+  }
+}

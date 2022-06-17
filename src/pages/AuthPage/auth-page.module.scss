@@ -1,0 +1,67 @@
+@import "../../sass/main.scss";
+
+.sectionContainer {
+  padding: 40px 0 35px 0;
+
+  @include tablet {
+    padding: 82px 102px 70px 102px;
+  }
+
+  @include desktop {
+    display: flex;
+    padding: 100px 124px;
+  }
+}
+
+.description {
+  text-align: start;
+  margin-bottom: 24px;
+
+  @include desktop {
+    margin-top: 70px;
+    margin-right: 112px;
+    width: 420px;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+
+  @include desktop {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  margin-bottom: 8px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+  @include tablet {
+    font-size: 16px;
+    line-height: 2.25;
+  }
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 2;
+  }
+}
+
+.bold {
+  composes: text;
+  font-weight: 600;
+
+  @include desktop {
+    font-weight: 700;
+  }
+}

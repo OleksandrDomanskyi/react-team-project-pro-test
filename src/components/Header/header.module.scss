@@ -1,8 +1,58 @@
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
+@import "../../sass/main.scss";
 
-    margin: 0;
+.headerContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+
+  @include tablet {
+    padding: 20px 32px;
+  }
+  @include desktop {
+    padding: 20px 15px;
+  }
+}
+
+.logoLink {
+  display: grid;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.7px;
+    height: 28px;
+    top: 21px;
+
+    background-color: #000;
+    @include mobile {
+      left: 150px;
+    }
+    @include tablet {
+      left: 161px;
+    }
+    @include desktop {
+      left: 145px;
+    }
+  }
+}
+
+.logo {
+  fill: var(--accent-color);
+}
+
+.themeSwitch {
+  display: grid;
+  place-items: center;
+  margin-left: 15px;
+  margin-right: auto;
 }

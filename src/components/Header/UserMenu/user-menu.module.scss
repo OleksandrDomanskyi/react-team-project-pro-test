@@ -1,0 +1,42 @@
+@import "../../../sass/main.scss";
+
+.userWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 40px;
+  margin-left: auto;
+  @include tablet {
+    margin-left: 60px;
+  }
+  @include desktop {
+    margin-left: 80px;
+  }
+}
+
+.userName {
+  display: grid;
+  place-items: center;
+  color: black;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: capitalize;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px 0px #121d2e1a;
+}
+
+.fullName {
+  color: var(--main-black-color);
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 1.33;
+  @include desktop {
+    margin-left: 20px;
+  }
+}
