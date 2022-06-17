@@ -1,0 +1,127 @@
+@import '../../sass/main.scss';
+
+.line {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #00122f;
+    top: 54px;
+    width: 150px;
+    opacity: 0.15;
+    border: 0.5px solid #00122f;
+
+  }
+
+.main{
+    margin:0;
+    background-image: url('./background/mob.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    @include tablet {
+        background-image: url('./background/tab.jpg'); 
+        
+    }
+    @include desktop {
+        background-image: url('./background/desk.jpg');
+        
+    }
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 8px;
+    padding-bottom: 250px;
+    @include tablet{
+      padding-top: 150px;
+      padding-bottom: 356px;
+    }
+    @include desktop{
+      padding-top: 68px;
+      padding-bottom: 272px;
+    }
+}
+
+.title{
+//   position: relative;
+  margin-top: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  max-width: 130px;
+  text-align: start;
+  @include tablet {
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+    margin-bottom: 44px;
+    max-width:400px;
+  }
+
+//   ::after{
+//       background: url('../../images/icons.svg#line1');
+//   }
+
+}
+
+.literatureList {
+    text-align: start;
+    margin-bottom: 32px;
+  padding-left: 12px;
+  @include tablet {
+    padding-left: 100px;
+  }
+  @include desktop {
+    padding-left: 80px;
+  }
+}
+
+.resourcesList{
+    text-align: start;
+    padding-left: 12px;
+  @include tablet {
+    padding-left: 100px;
+    margin-bottom: 336px;
+  }
+  @include desktop {
+    margin-bottom: 272px;
+    padding-left: 80px;
+  }
+ 
+}
+
+.literatureItem{
+  text-align: start;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.6;
+  max-width: 207px;
+  letter-spacing: 0.02em;
+
+  @include tablet{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.resourceItem{
+  text-align: start;
+  position: relative;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  max-width: 205px;
+  width: max-content;
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+    
+  }
+}
