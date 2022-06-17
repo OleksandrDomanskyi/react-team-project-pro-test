@@ -6,7 +6,7 @@ const UserMenu = ({ isMobile }) => {
   const name = "oleksii.kikot@yahoo.com";
   return (
     <div className={styles.userWrapper}>
-      <p className={styles.userWrapperName}>{name.slice(0, 1)}</p>
+      <p className={styles.userName}>{name.slice(0, 1)}</p>
       {!isMobile && <p className={styles.fullName}>{name}</p>}
     </div>
   );

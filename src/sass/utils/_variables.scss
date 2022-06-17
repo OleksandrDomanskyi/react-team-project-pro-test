@@ -1,10 +1,20 @@
-html {
-    --main-black-color: #000000;
-    --main-grey-color: #D7D7D7;
-    --accent-color: #FF6B09;
-    --border-color: #E2E3E5;
-    --backgound-color-main: #F5F6FB;
-    --card-background-color: #02172A;
-    --footer-background-color: #02172A;
-    --footer-text-color: rgba(255, 255, 255, 0.4);
+:root {
+  --text-color: #000000;
+  --main-grey-color: #d7d7d7;
+  --accent-color: #ff6b09;
+  --border-color: #e2e3e5;
+  --backgound-color-main: #f5f6fb;
+  --hero-text-decoration-color: #00122f;
+  --hero-description-color: #555555;
+  --card-background-color: #02172a;
+  --footer-background-color: #02172a;
+  --footer-text-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] {
+  --backgound-color-main: #464646;
+  --text-color: rgb(238, 238, 238);
+  --border-color: #bbbbbb;
+  --hero-text-decoration-color: white;
+  --hero-description-color: rgb(152, 152, 152);
 }

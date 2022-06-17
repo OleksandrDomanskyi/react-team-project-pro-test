@@ -1,0 +1,16 @@
+.item-color {
+  color: #000;
+}
+.recharts-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.recharts-surface {
+  @media screen and (min-width: 768px) {
+    margin-left: 16px;
+  }
+}
