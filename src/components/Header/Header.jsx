@@ -7,11 +7,19 @@ import ExpandedNavbar from "../../shared/components/Navbar/ExpandedNavbar/Expand
 
 import Icon from "../../shared/components/Icon";
 import useWindowDimensions from "../../shared/hooks/useWindowDimensions";
+import useLogin from "../../shared/hooks/useLogin";
 
 import styles from "./header.module.scss";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-const Header = () => {
+const Header = ({ switchTheme }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+    switchTheme();
+  };
 
   const toggleMenu = () => {
     return setNavbarOpen((prev) => !prev);
@@ -19,19 +27,31 @@ const Header = () => {
 
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
-  const isLogin = false;
+  const isLogin = useLogin();
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.wrapper}>
-        <div>
+        <div className={styles.logoContainer}>
           <Link
             to="/"
-            className={styles.logo}
+            className={styles.logoLink}
             onClick={() => setNavbarOpen(false)}
           >
-            <Icon name={"icon-logo"} width={130} height={30} />
+            <Icon
+              name={"icon-logo"}
+              width={130}
+              height={30}
+              className={styles.logo}
+            />
           </Link>
+        </div>
+        <div className={styles.themeSwitch}>
+          <DarkModeSwitch
+            size={25}
+            checked={isDarkMode}
+            onChange={toggleDarkMode}
+          />
         </div>
 
         {!isMobile && <ExpandedNavbar isLogin={isLogin} isMobile={isMobile} />}

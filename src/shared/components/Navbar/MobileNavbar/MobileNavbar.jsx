@@ -13,7 +13,7 @@ const MobileNavbar = ({ isLogin, isOpen, toggleNavbar }) => {
 
   return (
     <div className={styles.mobileMenu}>
-      {isLogin && <UserMenu isMobile={isMobile} isLogin={isLogin} />}
+      {isLogin && <UserMenu isMobile={isMobile} />}
       <BurgerMenu isOpen={isOpen} onClick={toggleNavbar} />
     </div>
   );

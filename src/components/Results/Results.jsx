@@ -2,7 +2,7 @@ import PieDiagram from "./PieDiagram";
 import { ReactComponent as Cat } from "../../images/cat.svg";
 import styles from "./Results.module.scss";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Results = () => {
   const navigate = useNavigate();
