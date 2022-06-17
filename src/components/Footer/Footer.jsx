@@ -13,7 +13,7 @@ const Footer = () => {
                     <a className={styles.link} href="https://goit.ua/" target="_blank" rel="noreferrer">Go
                         <span className={styles.item}>IT</span>
                     </a>
-                    <Link to='/contacts' className={styles.contacts}>Students</Link>
+                    <Link to='/results' className={styles.contacts}>Students</Link>
                 </div>
             </section>
         </footer>
