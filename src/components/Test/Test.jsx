@@ -14,12 +14,11 @@ const Test = () => {
   const test = useSelector(getTest, shallowEqual);
   const [questions, setQuestions] = useState({
     items: [],
-    loading: false,
+    loading: true,
     error: null,
   });
   const [answers, setAnswers] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const { items, loading } = questions;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,8 +41,8 @@ const Test = () => {
       !test ||
         dispatch(fetchQuestions(test))
           .then(({ payload }) => {
-            setQuestions({ items: payload.data, loading: false, error: null });
-            localStorage.setItem("questions", JSON.stringify(payload.data));
+            setQuestions({ items: payload, loading: false, error: null });
+            localStorage.setItem("questions", JSON.stringify(payload));
             localStorage.removeItem("answers");
           })
           .catch((error) =>
@@ -59,8 +58,8 @@ const Test = () => {
   const onClickFinishTest = () => {
     localStorage.removeItem("answers");
     localStorage.removeItem("questions");
-    if (items?.length === answers?.length) {
-      dispatch({ answers, type: test }).then((result) => {
+    if (questions.items?.length === answers?.length) {
+      dispatch(getResults({ answers, type: test })).then((result) => {
         return result;
       });
       return navigate("/results");
@@ -107,30 +106,36 @@ const Test = () => {
 
   const onClickNextBtn = () => {
     setCurrentQuestion((prevState) => {
-      if (prevState < items.length - 1) {
+      if (prevState < questions.items.length - 1) {
         return prevState + 1;
       }
       return prevState;
     });
   };
-  if (!items?.length) {
+  if (!questions.items?.length) {
     return (
       <main>
         <div>
           <div>
             <h2>{"[Testing " + test + "]"}</h2>
-            <button type="button">Finish Test</button>
+            <Button
+              btnText="Finish Test"
+              type="button"
+              isActive={true}
+              onClickBtn={onClickFinishTest}
+              className={styles.finish_btn}
+            />
           </div>
-          {!loading && <p>Sorry</p>}
+          {!questions.loading && <p>Sorry</p>}
         </div>
-        {loading && <p>...loading</p>}
+        {questions.loading && <p>...loading</p>}
       </main>
     );
   }
 
   return (
     <main>
-      <div>
+      <div className="container">
         <div>
           <h2>
             [Testing
@@ -145,14 +150,15 @@ const Test = () => {
             className={styles.finish_btn}
           />
         </div>
-        {Boolean(items?.length) && (
+        {Boolean(questions.items?.length) && (
           <div>
             <p>
-              Question <span>{currentQuestion + 1}</span> / {items.length}{" "}
+              Question <span>{currentQuestion + 1}</span> /{" "}
+              {questions.items.length}{" "}
             </p>
 
             <Questions
-              questions={items[currentQuestion]}
+              questions={questions.items[currentQuestion]}
               onChange={onSelectAnswer}
               selectedAnswers={answers}
             />
@@ -160,14 +166,14 @@ const Test = () => {
         )}
         <div>
           <Button
-            btnText=""
+            btnText="prevQuestion"
             type="button"
             isActive={true}
             onClickBtn={onClickPrevBtn}
             className={styles.prev_btn}
           />
           <Button
-            btnText=""
+            btnText="NextQuestion"
             type="button"
             isActive={true}
             onClickBtn={onClickNextBtn}
@@ -175,7 +181,7 @@ const Test = () => {
           />
         </div>
       </div>
-      {loading && <p>...loading</p>}
+      {questions.loading && <p>...loading</p>}
     </main>
   );
 };
