@@ -1,6 +1,6 @@
 @import '../../sass/main.scss';
 
-.line {
+.lineTop {
     content: '';
     position: absolute;
     display: block;
@@ -9,6 +9,38 @@
     width: 150px;
     opacity: 0.15;
     border: 0.5px solid #00122f;
+    margin-top: 118px;
+    @include tablet {
+        margin-top:252px;
+        width:336px;
+    }
+    @include desktop {
+        margin-top:169px;
+        width:322px;
+    }
+    
+
+  }
+
+  .lineBottom {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #00122f;
+   
+    width: 150px;
+    opacity: 0.15;
+    border: 0.5px solid #00122f;
+    margin-top: 242px;
+    @include tablet {
+        margin-top:344px;
+        width:336px;
+    }
+    @include desktop {
+        margin-top:342px;
+        width:322px;
+    }
+    
 
   }
 
@@ -45,7 +77,6 @@
 }
 
 .title{
-//   position: relative;
   margin-top: 32px;
   font-weight: 700;
   font-size: 18px;
@@ -61,18 +92,17 @@
     max-width:400px;
   }
 
-//   ::after{
-//       background: url('../../images/icons.svg#line1');
-//   }
 
 }
 
 .literatureList {
     text-align: start;
-    margin-bottom: 32px;
-  padding-left: 12px;
+    margin-top: 20px;
+    list-style-type:upper;
+    padding-left:10px;
   @include tablet {
     padding-left: 100px;
+    margin-top: 24px;
   }
   @include desktop {
     padding-left: 80px;
@@ -80,11 +110,15 @@
 }
 
 .resourcesList{
+    margin-top: 20px;
     text-align: start;
-    padding-left: 12px;
+    list-style-type:upper;
+    padding-left:10px;
   @include tablet {
     padding-left: 100px;
     margin-bottom: 336px;
+    margin-top: 24px;
+    
   }
   @include desktop {
     margin-bottom: 272px;
@@ -100,7 +134,7 @@
   line-height: 1.6;
   max-width: 207px;
   letter-spacing: 0.02em;
-
+  color:black;
   @include tablet{
     font-weight: 500;
     font-size: 14px;
@@ -117,6 +151,8 @@
   letter-spacing: 0.02em;
   max-width: 205px;
   width: max-content;
+  text-decoration: underline;
+  color:black;
 
   @include tablet {
     font-weight: 500;
@@ -124,4 +160,33 @@
     line-height: 1.57;
     
   }
+}
+
+.literatureLink{
+    &:visited {
+        color: black;
+      }
+      &:hover {
+        color: black;  
+      }
+      &:active {
+        color: black;
+      }
+    
+    color: black;
+   
+}
+.resourceLink{
+    &:visited {
+        color: black;
+      }
+      &:hover {
+        color: black;  
+      }
+      &:active {
+        color: black;
+      }
+    
+    color: black;
+   
 }
