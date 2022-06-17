@@ -7,7 +7,7 @@ const UserMenu = ({ isMobile }) => {
   const name = useEmail();
   return (
     <div className={styles.userWrapper}>
-      <p className={styles.userName}>{name.slice(0, 1)}</p>
+      <p className={styles.userName}>{name && name.slice(0, 1)}</p>
       {!isMobile && <p className={styles.fullName}>{name}</p>}
     </div>
   );
