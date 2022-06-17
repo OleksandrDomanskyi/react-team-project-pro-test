@@ -35,7 +35,7 @@ function Login() {
         style={{ marginTop: "100px" }}
         isSignedIn={true}
       />
-      {Object.keys(user).length != 0 && (
+      {Object.keys(user).length !== 0 && (
         <div>
           <img src={user.imageUrl} alt="userImg" />
           <h2>{user.name}</h2>
