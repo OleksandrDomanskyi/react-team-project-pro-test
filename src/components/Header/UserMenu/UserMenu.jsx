@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import useEmail from "../../../shared/hooks/useUserEmail";
 
 import styles from "./user-menu.module.scss";
 
 const UserMenu = ({ isMobile }) => {
-  const name = "oleksii.kikot@yahoo.com";
+  const name = useEmail();
   return (
     <div className={styles.userWrapper}>
       <p className={styles.userName}>{name.slice(0, 1)}</p>
