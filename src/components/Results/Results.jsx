@@ -1,4 +1,4 @@
-import PieDiagram from "./PieDiagram";
+import PieDiagram from './PieDiagram/PieDiagram';
 import { ReactComponent as Cat } from "../../images/cat.svg";
 import styles from "./Results.module.scss";
 import { useNavigate } from "react-router-dom";
