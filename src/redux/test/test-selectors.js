@@ -1,1 +1,1 @@
-export const getTest = (store) => store.test.testType;
+export const getTest = ({ test }) => test.testType;
