@@ -4,7 +4,7 @@
   text-align: start;
   padding: 40px 20px;
   box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
-  background-color: #fff;
+  background-color: var(--auth-form-bg-color);
   @include tablet {
     width: 500px;
     padding: 60px 32px 48px 32px;
@@ -14,6 +14,7 @@
   }
 }
 .text {
+  color: var(--hero-description-color);
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
@@ -37,18 +38,21 @@
   margin-left: 10px;
 }
 
-.GoogleButton {
-  border: transparent;
-  background-color: #fafafa;
+// .GoogleButton {
+//   border: transparent;
+//   background-color: #fafafa;
+//   margin: 32px 0;
+//   cursor: pointer;
+
+//   display: flex;
+//   align-items: center;
+
+//   padding: 17px 38px;
+
+//   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+// }
+.GoogleButton2 {
   margin: 32px 0;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-
-  padding: 17px 38px;
-
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .inputs {
@@ -89,6 +93,7 @@
   background-color: transparent;
   border: 1px solid #ced2d1;
   cursor: pointer;
+  color: var(--text-color);
 
   width: 100px;
   height: 60px;
