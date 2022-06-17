@@ -1,0 +1,29 @@
+.question_container{
+
+}
+
+.test_question{
+
+}
+
+.answers{
+display: flex;
+flex-direction: column;
+
+
+
+font-family: 'Montserrat Medium', sans-serif;
+font-size: 10px;
+line-height: 12px;
+letter-spacing: 0.02em;
+color: var(--text-color);
+}
+
+.questions_label{
+margin-bottom: 14px;
+
+}
+
+.radio_input{
+margin-right: 20px;
+}

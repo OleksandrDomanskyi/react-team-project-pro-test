@@ -6,8 +6,8 @@ export const fetchQuestions = createAsyncThunk(
   "test/fetch",
   async (type, { rejectWithValue }) => {
     try {
-      const data = await getTest(type);
-      return data;
+      const result = await getTest(type);
+      return result.data;
     } catch (error) {
       return rejectWithValue(error);
     }
