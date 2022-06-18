@@ -50,7 +50,7 @@ const teamData = [
         name:"Oleksii Kikot",
         role:'Front-End developer',
         social: {
-            linkedin:'https://www.linkedin.com/',
+            linkedin:'https://www.linkedin.com/in/oleksii-kikot-b12960241/',
             github:'https://github.com/alxkkt',
             mail:'kikot.oleksii@gmail.com',
         },
