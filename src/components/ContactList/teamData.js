@@ -52,7 +52,7 @@ const teamData = [
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/alxkkt',
-            mail:'oleksii.kikot@yahoo.com',
+            mail:'kikot.oleksii@gmail.com',
         },
     },
 
@@ -95,7 +95,7 @@ const teamData = [
         id:7,
         // img:Liamzyn,
         name:'Bohdan Liamzyn',
-        role:'Front-End developer',
+        role:'Project mentor',
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/BogdanLyamzin',
