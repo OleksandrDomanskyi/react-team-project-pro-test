@@ -28,6 +28,6 @@ ContactCard.propTypes = {
   social: PropTypes.shape({
     linkedin: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
-    telegram: PropTypes.string.isRequired,
+    mail: PropTypes.string.isRequired,
   }),
 };
