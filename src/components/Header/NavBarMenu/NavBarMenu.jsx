@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 
 import Icon from "../../../shared/components/Icon";
 import useWindowDimensions from "../../../shared/hooks/useWindowDimensions";
 import useLogin from "../../../shared/hooks/useLogin";
-import { items } from "./items";
+import { logout } from "../../../redux/auth/auth-operations";
 
+import { items } from "./items";
 import styles from "./nav-bar-menu.module.scss";
 
 const getActiveLink = ({ isActive }) => {
@@ -17,9 +19,13 @@ const NavBarMenu = ({ toggleNavbar }) => {
   const isMobile = width < 768;
 
   const isLogin = useLogin();
+  const dispatch = useDispatch();
+
+  const logoutUser = () => {
+    dispatch(logout());
+  };
 
   const privateItems = items.filter((item) => item.private === isLogin);
-
   const validItems = isLogin ? items : privateItems;
 
   const closeMenu = () => {
@@ -42,7 +48,7 @@ const NavBarMenu = ({ toggleNavbar }) => {
       <ul className={styles.navMenuList} onClick={closeMenu}>
         {elements}
         {isLogin && isMobile && (
-          <li className={styles.navMenuItemIcon}>
+          <li className={styles.navMenuItemIcon} onClick={logoutUser}>
             <Icon
               name="icon-sign-out"
               width={16}
