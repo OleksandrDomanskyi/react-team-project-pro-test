@@ -46,16 +46,17 @@
 
 .main{
     margin:0;
-    background-image: url('./background/mob.jpg');
+    background-image: url('./background/mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
+    
     @include tablet {
-        background-image: url('./background/tab.jpg'); 
-        
+        background-image: url('./background/tablet.png'); 
+       
     }
     @include desktop {
-        background-image: url('./background/desk.jpg');
+        background-image: url('./background/desktop.png');
         
     }
 }
@@ -65,14 +66,17 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 8px;
-    padding-bottom: 250px;
+    padding-bottom: 217px;
+   
     @include tablet{
       padding-top: 150px;
       padding-bottom: 356px;
+      
     }
     @include desktop{
       padding-top: 68px;
       padding-bottom: 272px;
+     
     }
 }
 
@@ -114,14 +118,15 @@
     text-align: start;
     list-style-type:upper;
     padding-left:10px;
+   
   @include tablet {
     padding-left: 100px;
-    margin-bottom: 336px;
+
     margin-top: 24px;
     
   }
   @include desktop {
-    margin-bottom: 272px;
+    
     padding-left: 80px;
   }
  
