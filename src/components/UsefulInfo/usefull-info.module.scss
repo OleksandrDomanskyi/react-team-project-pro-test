@@ -46,16 +46,16 @@
 
 .main{
     margin:0;
-    background-image: url('./background/mob.jpg');
+    background-image: url('./background/mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
     @include tablet {
-        background-image: url('./background/tab.jpg'); 
+        background-image: url('./background/tablet.png'); 
         
     }
     @include desktop {
-        background-image: url('./background/desk.jpg');
+        background-image: url('./background/desktop.png');
         
     }
 }
