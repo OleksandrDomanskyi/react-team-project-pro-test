@@ -19,7 +19,9 @@
 }
 .testingTheory {
   text-align: center;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -71,6 +73,8 @@
   }
 }
 .cat {
+  display: block;
+  margin: 0 auto;
   width: 120px;
   height: 120px;
   margin-bottom: 20px;
@@ -114,6 +118,9 @@
   }
 }
 .button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 190px;
   height: 48px;
   margin-bottom: 50px;
@@ -134,4 +141,8 @@
   &:hover {
     cursor: pointer;
   }
+}
+.boldInfo {
+  font-family: "Montserrat";
+  font-weight: 700;
 }

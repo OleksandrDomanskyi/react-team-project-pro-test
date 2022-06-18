@@ -18,6 +18,8 @@ const App = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   };
+
+
   return (
     <div className="App" data-theme={theme}>
       <Header switchTheme={switchTheme} />

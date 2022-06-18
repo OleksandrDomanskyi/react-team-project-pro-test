@@ -1,12 +1,22 @@
+import { useDispatch } from "react-redux";
+
 import PropTypes from "prop-types";
 
 import UserMenu from "../../../../components/Header/UserMenu/UserMenu";
 import NavBarMenu from "../../../../components/Header/NavBarMenu";
 import Icon from "../../Icon";
 
+import { logout } from "../../../../redux/auth/auth-operations";
+
 import styles from "./expanded-navbar.module.scss";
 
 const ExpandedNavbar = ({ isLogin, isMobile }) => {
+  const dispatch = useDispatch();
+
+  const logoutUser = () => {
+    dispatch(logout())
+  };
+  
   return (
     <div className={styles.controlItems}>
       <NavBarMenu />
@@ -14,7 +24,7 @@ const ExpandedNavbar = ({ isLogin, isMobile }) => {
       {isLogin && (
         <>
           <UserMenu isMobile={isMobile} />
-          <button type="button" className={styles.logoutBtn}>
+          <button onClick={() => dispatch(logoutUser)} type="button" className={styles.logoutBtn}>
             <Icon
               name={"icon-sign-out"}
               width={16}
