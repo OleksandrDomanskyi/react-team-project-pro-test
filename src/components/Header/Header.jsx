@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import NavBarMenu from "./NavBarMenu";
 import MobileNavbar from "../../shared/components/Navbar/MobileNavbar";
