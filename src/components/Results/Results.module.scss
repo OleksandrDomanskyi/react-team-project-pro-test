@@ -19,7 +19,9 @@
 }
 .testingTheory {
   text-align: center;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -116,6 +118,7 @@
   }
 }
 .button {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 190px;

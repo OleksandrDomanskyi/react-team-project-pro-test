@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, Legend } from "recharts";
 
 import "./PieDiagram.scss";
 
-const App = () => {
+const DiagramPieChart = () => {
   const diagramSize = () => {
     if (window.innerWidth < 768) {
       return { pieSize: 73, pieChartHeight: 156 };
@@ -18,7 +18,7 @@ const App = () => {
     { name: "Incorrect", students: 3 },
   ];
   const COLORS = [" #FF6B01", "#D7D7D7"];
-  
+
   return (
     <PieChart
       align="center"
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DiagramPieChart;
