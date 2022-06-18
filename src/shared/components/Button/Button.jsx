@@ -14,6 +14,5 @@ Button.propTypes = {
   className: PropTypes.string,
   onClickBtn: PropTypes.func,
   btnText: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(["button", "submit", "reset"]).isRequired,
 };

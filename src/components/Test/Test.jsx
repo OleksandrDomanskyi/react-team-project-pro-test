@@ -1,6 +1,7 @@
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+// import toast, { Toaster } from "react-hot-toast";
 
 import Questions from "./Questions/Questions";
 import Button from "../../shared/components/Button";
@@ -58,12 +59,7 @@ const Test = () => {
   const onClickFinishTest = () => {
     localStorage.removeItem("answers");
     localStorage.removeItem("questions");
-    if (questions.items?.length === answers?.length) {
-      dispatch(getResults({ answers, type: test })).then((result) => {
-        return result;
-      });
-      return navigate("/results");
-    }
+
     return navigate("/");
   };
 
@@ -112,18 +108,31 @@ const Test = () => {
       return prevState;
     });
   };
+
+  const onClickShowResult = () => {
+    if (questions.items?.length === answers?.length) {
+      dispatch(getResults({ answers, type: test })).then((result) => {
+        return result;
+      });
+      return navigate("/results");
+    } else {
+      // toast.error("Please, give answers to all questions!");
+      alert("Please, give answers to all questions!");
+    }
+  };
+
   if (!questions.items?.length) {
     return (
-      <main>
-        <div>
-          <div>
-            <h2>{"[Testing " + test + "]"}</h2>
+      <main className={styles.test}>
+        <div className="container">
+          <div className={styles.test_header}>
+            <h2 className={styles.test_name}>{"[Testing " + test + "]"}</h2>
             <Button
               btnText="Finish Test"
               type="button"
               isActive={true}
               onClickBtn={onClickFinishTest}
-              className={styles.finish_btn}
+              className={styles.btn_finish}
             />
           </div>
           {!questions.loading && <p>Sorry</p>}
@@ -134,10 +143,10 @@ const Test = () => {
   }
 
   return (
-    <main>
+    <main className={styles.test}>
       <div className="container">
-        <div>
-          <h2>
+        <div className={styles.test_header}>
+          <h2 className={styles.test_name}>
             [Testing
             <br />
             {test}_]
@@ -145,16 +154,18 @@ const Test = () => {
           <Button
             btnText="Finish Test"
             type="button"
-            isActive={true}
             onClickBtn={onClickFinishTest}
-            className={styles.finish_btn}
+            className={styles.btn_finish}
           />
         </div>
         {Boolean(questions.items?.length) && (
-          <div>
-            <p>
-              Question <span>{currentQuestion + 1}</span> /{" "}
-              {questions.items.length}{" "}
+          <div className={styles.test_card}>
+            <p className={styles.test_count}>
+              Question{" "}
+              <span className={styles.test_count_number}>
+                {currentQuestion + 1}
+              </span>{" "}
+              / {questions.items.length}{" "}
             </p>
 
             <Questions
@@ -164,21 +175,32 @@ const Test = () => {
             />
           </div>
         )}
-        <div>
-          <Button
-            btnText="prevQuestion"
-            type="button"
-            isActive={true}
-            onClickBtn={onClickPrevBtn}
-            className={styles.prev_btn}
-          />
-          <Button
-            btnText="NextQuestion"
-            type="button"
-            isActive={true}
-            onClickBtn={onClickNextBtn}
-            className={styles.next_btn}
-          />
+        <div className={styles.btn_container}>
+          {Boolean(currentQuestion > 0) && (
+            <Button
+              btnText=""
+              type="button"
+              onClickBtn={onClickPrevBtn}
+              className={styles.btn_prev}
+            />
+          )}
+          {Boolean(questions.items.length !== currentQuestion + 1) && (
+            <Button
+              btnText=""
+              type="button"
+              onClickBtn={onClickNextBtn}
+              className={styles.btn_next}
+            />
+          )}
+          {Boolean(questions.items.length === currentQuestion + 1) && (
+            <Button
+              btnText=""
+              type="button"
+              onClickBtn={onClickShowResult}
+              className={styles.btn_results}
+            />
+          )}
+          {/* <Toaster /> */}
         </div>
       </div>
       {questions.loading && <p>...loading</p>}

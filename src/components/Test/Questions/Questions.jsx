@@ -30,9 +30,14 @@ const Questions = ({
     );
   });
 
+  const textSize =
+    (question?.length < 30 && styles.test_question_size_big) ||
+    (question?.length < 60 && styles.test_question_size_medium) ||
+    styles.test_question_size_small;
+
   return (
     <div className={styles.question_container}>
-      <p className={styles.test_question}>{question}</p>
+      <p className={`${styles.test_question} ${textSize}`}>{question}</p>
       <div className={styles.answers}>{elements}</div>
     </div>
   );

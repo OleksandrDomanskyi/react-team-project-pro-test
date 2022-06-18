@@ -1,29 +1,117 @@
-.question_container{
-
-}
-
+@import '../../../sass/main.scss';
 .test_question{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.02em;
 
-}
+        &_size{
+            &_small{
+                font-size: 10px;
+                line-height: 1.2;
+                
+                @include tablet {
+                    font-size: 16px;
+                    line-height: 1.4;
+                }
+            }
+            &_medium{
+                font-size: 12px;
+                line-height: 1.5;
+
+                @include tablet {
+                    font-size: 20px;
+                    line-height: 1.4;
+                }
+            }
+            &_big{
+                font-size: 12px;
+                line-height: 1.5;
+                
+                @include tablet {
+                font-size: 22px;
+                line-height: 1.4;
+                }
+            }
+        }
+
+
+        &::after {
+            content: ' ';
+            display: block;
+            margin: 32px 55px 32px 46px;
+            width: 130px;
+            opacity: 0.15;
+            border-bottom: 1px solid #00122F;
+            @include tablet {
+                margin: 28px 111px 40px 102px;
+                width: 336px;
+            }
+        }
+
+
+    }
+
 
 .answers{
 display: flex;
 flex-direction: column;
-
-
-
 font-family: 'Montserrat Medium', sans-serif;
+
 font-size: 10px;
-line-height: 12px;
+line-height: 1.2;
 letter-spacing: 0.02em;
 color: var(--text-color);
 }
 
 .questions_label{
-margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    @include tablet {
+        font-size: 16px;
+        line-height: 1.19;
+    }
 
 }
 
 .radio_input{
-margin-right: 20px;
-}
+    margin-right: 20px;
+    height: 18px;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+
+
+&::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid var(--text-color);
+    }
+    &:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+
+}}
+
+
+
