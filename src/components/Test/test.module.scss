@@ -46,6 +46,11 @@
         @include tablet{
             padding: 40px 73px 60px 82px;
         }
+        @include desktop {
+            padding: 40px 86px 80px 96px;
+            max-width: 821px;
+        }
+        
     }
 
     &_count{
@@ -101,13 +106,12 @@
 
     &_container{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
 
     }
         &_prev {
         width: 55px;
         height: 34px;
-        margin-right: 170px;
         color: #fff;
         background-color: var(--accent-color);
         border-style: none;
@@ -125,7 +129,7 @@
             display: flex;
             justify-content: space-around;
             width: 210px;
-            margin-right: 284px;
+
         &::after {
             content: 'Previous question';
             margin-bottom: 10px;
@@ -135,6 +139,8 @@
             line-height: 1.17;
         }
         }
+
+
     }
     &_next{
         width: 55px;
