@@ -141,6 +141,9 @@ const Test = () => {
     );
   }
 
+  const styleBtnContainer =
+    (currentQuestion > 0 && styles.btn_container) || styles.btn_hidden;
+
   return (
     <main className={styles.test}>
       <div className="container">
@@ -174,7 +177,7 @@ const Test = () => {
             />
           </div>
         )}
-        <div className={styles.btn_container}>
+        <div className={`${styleBtnContainer}`}>
           {Boolean(currentQuestion > 0) && (
             <Button
               btnText=""

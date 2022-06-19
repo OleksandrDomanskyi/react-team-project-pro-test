@@ -41,7 +41,7 @@
         margin-bottom: 20px;
         padding: 40px 20px 76px 29px;
         box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
-        background-color: white;
+        background-color: var(--auth-form-bg-color);
 
         @include tablet{
             padding: 40px 73px 60px 82px;
@@ -109,6 +109,11 @@
         justify-content: space-between;
 
     }
+
+    &_hidden{
+        display: flex;
+        justify-content: flex-end;
+    }
         &_prev {
         width: 55px;
         height: 34px;
@@ -145,7 +150,7 @@
     &_next{
         width: 55px;
         height: 34px;
-        color: var(--text-color);
+        color: black;
         background-color: white;
         border-style: none;
     
@@ -174,6 +179,7 @@
             }
     }
 
+    
     &_results{
         width: 55px;
         padding: 5px;

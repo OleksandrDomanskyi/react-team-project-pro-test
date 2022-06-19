@@ -11,6 +11,7 @@
             &_small{
                 font-size: 10px;
                 line-height: 1.2;
+
                 
                 @include tablet {
                     font-size: 16px;
@@ -20,6 +21,7 @@
             &_medium{
                 font-size: 12px;
                 line-height: 1.5;
+
 
                 @include tablet {
                     font-size: 20px;
