@@ -14,8 +14,8 @@ const DiagramPieChart = ({ result }) => {
   };
 
   const data = [
-    { name: "Correct", answers: result.result },
-    { name: "Incorrect", answers: 100 - result.result },
+    { name: "Correct", answers: parseFloat(result.result) },
+    { name: "Incorrect", answers: 100 - parseFloat(result.result) },
   ];
   const COLORS = [" #FF6B01", "#D7D7D7"];
 
@@ -36,8 +36,16 @@ const DiagramPieChart = ({ result }) => {
         layout="vertical"
         content={renderLegend}
         payload={[
-          { value: "correct", color: "#FF6B01", type: "square" },
-          { value: "incorrect", color: "#D7D7D7", type: "square" },
+          {
+            value: `${result.result} correct`,
+            color: "#FF6B01",
+            type: "square",
+          },
+          {
+            value: `${100 - parseFloat(result.result)}% incorrect`,
+            color: "#D7D7D7",
+            type: "square",
+          },
         ]}
       ></Legend>
       <Pie
