@@ -9,7 +9,17 @@
         }
     }
 
+    .icon {
+        transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
     .icon:hover,
     .icon:active {
         fill: #FF6B09;
+    }
+
+    .button {
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
     }

@@ -6,14 +6,14 @@ const UsefulInfo = () => {
     const literatureList = literature.map(item => {
         return (
           <li className={styles.literatureItem} key={nanoid()}>
-            <a className={styles.literatureLink}  href={item.link}>{item.content}</a>
+            <a className={styles.literatureLink}  href={item.link} target="_blank" rel="noopener noreferrer">{item.content}</a>
           </li>
         );
       });
       const resourcesList = resources.map(item => {
         return (
           <li className={styles.resourceItem} key={nanoid()}>
-            <a className={styles.resourceLink} href={item.link}>{item.content}</a>
+            <a className={styles.resourceLink} href={item.link} target="_blank" rel="noopener noreferrer">{item.content}</a>
           </li>
         );
       });

@@ -1,7 +1,7 @@
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-// import toast, { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 import Questions from "./Questions/Questions";
 import Button from "../../shared/components/Button";
@@ -116,8 +116,7 @@ const Test = () => {
       });
       return navigate("/results");
     } else {
-      // toast.error("Please, give answers to all questions!");
-      alert("Please, give answers to all questions!");
+      toast.error("Please, give answers to all questions!");
     }
   };
 
@@ -141,6 +140,9 @@ const Test = () => {
       </main>
     );
   }
+
+  const styleBtnContainer =
+    (currentQuestion > 0 && styles.btn_container) || styles.btn_hidden;
 
   return (
     <main className={styles.test}>
@@ -175,7 +177,7 @@ const Test = () => {
             />
           </div>
         )}
-        <div className={styles.btn_container}>
+        <div className={`${styleBtnContainer}`}>
           {Boolean(currentQuestion > 0) && (
             <Button
               btnText=""
@@ -200,7 +202,7 @@ const Test = () => {
               className={styles.btn_results}
             />
           )}
-          {/* <Toaster /> */}
+          <Toaster />
         </div>
       </div>
       {questions.loading && <p>...loading</p>}

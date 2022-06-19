@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, Legend } from "recharts";
 
 import "./PieDiagram.scss";
 
-const DiagramPieChart = () => {
+const DiagramPieChart = ({ result }) => {
   const diagramSize = () => {
     if (window.innerWidth < 768) {
       return { pieSize: 73, pieChartHeight: 156 };
@@ -14,8 +14,8 @@ const DiagramPieChart = () => {
   };
 
   const data = [
-    { name: "Correct", students: 10 },
-    { name: "Incorrect", students: 3 },
+    { name: "Correct", answers: parseFloat(result.result) },
+    { name: "Incorrect", answers: 100 - parseFloat(result.result) },
   ];
   const COLORS = [" #FF6B01", "#D7D7D7"];
 
@@ -36,14 +36,22 @@ const DiagramPieChart = () => {
         layout="vertical"
         content={renderLegend}
         payload={[
-          { value: "correct", color: "#FF6B01", type: "square" },
-          { value: "incorrect", color: "#D7D7D7", type: "square" },
+          {
+            value: `${result.result} correct`,
+            color: "#FF6B01",
+            type: "square",
+          },
+          {
+            value: `${100 - parseFloat(result.result)}% incorrect`,
+            color: "#D7D7D7",
+            type: "square",
+          },
         ]}
       ></Legend>
       <Pie
         align="center"
         data={data}
-        dataKey="students"
+        dataKey="answers"
         legendType="square"
         fill="green"
         outerRadius={diagramSize().pieSize}
