@@ -99,7 +99,7 @@ const teamData = [
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/BogdanLyamzin',
-            mail:'',
+            mail:'bogdan.lyamzin.d@gmail.com',
         },
     }
     
