@@ -23,6 +23,7 @@
     "react-toggle-dark-mode": "^1.0.4",
     "recharts": "^2.1.10",
     "redux-persist": "^6.0.0",
+    "spinners-react": "^1.0.7",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },
