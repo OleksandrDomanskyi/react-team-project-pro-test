@@ -124,7 +124,7 @@
   line-height: 1.6;
   max-width: 207px;
   letter-spacing: 0.02em;
-  color: black;
+  color:var(--text-color);
   @include tablet {
     font-weight: 500;
     font-size: 14px;
@@ -142,8 +142,8 @@
   max-width: 205px;
   width: max-content;
   text-decoration: underline;
-  color: black;
-
+  
+  color:var(--text-color);
   @include tablet {
     font-weight: 500;
     font-size: 14px;
@@ -154,27 +154,35 @@
 // color: var(--text-color);
 .literatureLink {
   &:visited {
-    color: black;
+   
+    color:var(--text-color);
   }
   &:hover {
-    color: black;
+  
+    color:var(--text-color);
   }
   &:active {
-    color: black;
+    
+    color:var(--text-color);
   }
 
-  color: black;
+  
+  color:var(--text-color);
 }
 .resourceLink {
   &:visited {
-    color: black;
+    
+    color:var(--text-color);
   }
   &:hover {
-    color: black;
+    
+    color:var(--text-color);
   }
   &:active {
-    color: black;
+    
+    color:var(--text-color);
   }
 
-  color: black;
+ 
+  color:var(--text-color);
 }
