@@ -14,7 +14,7 @@
       position: absolute;
       pointer-events: none;
       display: block;
-      height: 72px;
+      height: 71px;
       width: 1px;
       background-color: var(--border-color);
       right: 60px;
@@ -29,7 +29,7 @@
       position: absolute;
       pointer-events: none;
       display: block;
-      height: 72px;
+      height: 71px;
       width: 1px;
       background-color: var(--border-color);
       right: 40px;
@@ -40,7 +40,7 @@
   }
 }
 .icon {
-  fill: var(--main-black-color);
+  fill: var(--text-color);
   &:hover,
   &:focus {
     fill: var(--accent-color);

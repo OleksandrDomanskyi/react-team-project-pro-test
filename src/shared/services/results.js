@@ -1,11 +1,11 @@
-import instance from './auth';
+import instance from "./auth";
 
-export const getTechResult = async () => {
-    const { data } = await instance.post('/qa-test/tech-results');
-    return data;
+const getResult = async ({ answers, type }) => {
+  const { data: result } = await instance.post(`/qa-test/${type}-results`, {
+    answers,
+  });
+
+  return result;
 };
 
-export const getTheoryResult = async () => {
-    const { data } = await instance.post('/qa-test/theory-results');
-    return data;
-};
+export default getResult;

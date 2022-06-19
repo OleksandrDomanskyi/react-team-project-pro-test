@@ -95,11 +95,11 @@ const teamData = [
         id:7,
         img:Liamzyn,
         name:'Bohdan Liamzyn',
-        role:'Front-End developer',
+        role:'Project mentor',
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/BogdanLyamzin',
-            mail:'',
+            mail:'bogdan.lyamzin.d@gmail.com',
         },
     }
     

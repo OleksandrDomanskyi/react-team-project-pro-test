@@ -1,0 +1,189 @@
+@import "../../sass/main.scss";
+
+.lineTop {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #00122f;
+  top: 54px;
+  width: 150px;
+  opacity: 0.15;
+  border: 0.5px solid #00122f;
+  margin-top: 118px;
+  @include tablet {
+    margin-top: 252px;
+    width: 336px;
+  }
+  @include desktop {
+    margin-top: 169px;
+    width: 322px;
+  }
+}
+
+.lineBottom {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #00122f;
+
+  width: 150px;
+  opacity: 0.15;
+  border: 0.5px solid #00122f;
+  margin-top: 242px;
+  @include tablet {
+    margin-top: 344px;
+    width: 336px;
+  }
+  @include desktop {
+    margin-top: 342px;
+    width: 322px;
+  }
+}
+
+.main {
+  margin: 0;
+  background-image: url("./background/mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  @include tablet {
+    background-image: url("./background/tablet.png");
+  }
+  @include desktop {
+    background-image: url("./background/desktop.png");
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 8px;
+  padding-bottom: 250px;
+  @include tablet {
+    padding-top: 150px;
+    padding-bottom: 356px;
+  }
+  @include desktop {
+    padding-top: 68px;
+    padding-bottom: 272px;
+    margin-left: 100px;
+  }
+}
+
+.title {
+  margin-top: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  max-width: 130px;
+  text-align: start;
+  @include tablet {
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+    margin-bottom: 44px;
+    max-width: 400px;
+  }
+}
+
+.literatureList {
+  text-align: start;
+  margin-top: 20px;
+  list-style-type: upper;
+  padding-left: 10px;
+  @include tablet {
+    padding-left: 100px;
+    margin-top: 24px;
+  }
+  @include desktop {
+    padding-left: 80px;
+  }
+}
+
+.resourcesList {
+  margin-top: 20px;
+  text-align: start;
+  list-style-type: upper;
+  padding-left: 10px;
+  @include tablet {
+    padding-left: 100px;
+
+    margin-top: 24px;
+  }
+  @include desktop {
+    
+    padding-left: 80px;
+  }
+}
+
+.literatureItem {
+  text-align: start;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.6;
+  max-width: 207px;
+  letter-spacing: 0.02em;
+  color:var(--text-color);
+  @include tablet {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.resourceItem {
+  text-align: start;
+  position: relative;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  max-width: 205px;
+  width: max-content;
+  text-decoration: underline;
+  
+  color:var(--text-color);
+  @include tablet {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+// color: var(--text-color);
+.literatureLink {
+  &:visited {
+   
+    color:var(--text-color);
+  }
+  &:hover {
+  
+    color:var(--text-color);
+  }
+  &:active {
+    
+    color:var(--text-color);
+  }
+
+  
+  color:var(--text-color);
+}
+.resourceLink {
+  &:visited {
+    
+    color:var(--text-color);
+  }
+  &:hover {
+    
+    color:var(--text-color);
+  }
+  &:active {
+    
+    color:var(--text-color);
+  }
+
+ 
+  color:var(--text-color);
+}

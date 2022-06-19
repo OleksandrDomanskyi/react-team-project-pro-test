@@ -1,17 +1,10 @@
 import React from "react";
 import renderLegend from "./renderLegend/renderLegend.jsx";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  // LabelList,
-  // Label,
-  Legend,
-  // ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Cell, Legend } from "recharts";
+
 import "./PieDiagram.scss";
 
-const App = () => {
+const DiagramPieChart = ({ result }) => {
   const diagramSize = () => {
     if (window.innerWidth < 768) {
       return { pieSize: 73, pieChartHeight: 156 };
@@ -21,19 +14,19 @@ const App = () => {
   };
 
   const data = [
-    { name: "Correct", students: 10 },
-    { name: "Incorrect", students: 3 },
+    { name: "Correct", answers: parseFloat(result.result) },
+    { name: "Incorrect", answers: 100 - parseFloat(result.result) },
   ];
   const COLORS = [" #FF6B01", "#D7D7D7"];
-  
+
   return (
     <PieChart
       align="center"
-      width={window.innerWidth - 30}
+      width={window.innerWidth > 768 ? 600 : 258}
       height={diagramSize().pieChartHeight}
     >
       <Legend
-        margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
+        className="legend"
         width={55}
         iconType="square"
         iconSize="14px"
@@ -43,14 +36,23 @@ const App = () => {
         layout="vertical"
         content={renderLegend}
         payload={[
-          { value: "correct", color: "#FF6B01", type: "square" },
-          { value: "incorrect", color: "#D7D7D7", type: "square" },
+          {
+            value: `${result.result || 0} correct`,
+            color: "#FF6B01",
+            type: "square",
+          },
+          {
+            value: `${100 - parseFloat(result.result) || 0}% incorrect`,
+            color: "#D7D7D7",
+            type: "square",
+          },
         ]}
       ></Legend>
       <Pie
+        paddingAngle={0}
         align="center"
         data={data}
-        dataKey="students"
+        dataKey="answers"
         legendType="square"
         fill="green"
         outerRadius={diagramSize().pieSize}
@@ -67,4 +69,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DiagramPieChart;

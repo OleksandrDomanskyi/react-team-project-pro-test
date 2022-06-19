@@ -40,3 +40,5 @@ export const logout = async () => {
   removeToken();
   return data;
 };
+
+export default instance;

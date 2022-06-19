@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom";
+import { useCallback, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
+import ArrowIcon from './ArrowIcon/ArrowIcon';
+
+import testType from "../../redux/test/test-actions";
 import styles from "./select-test.module.scss";
 
 const SelectTest = () => {
+  const dispatch = useDispatch();
+  const setType = useCallback(
+    (type) => {
+      dispatch(testType(type));
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    localStorage.removeItem("answers");
+    localStorage.removeItem("questions");
+    setType({ testType: "" });
+  }, [setType]);
+
   return (
     <main>
       <section className="container">
@@ -14,11 +33,21 @@ const SelectTest = () => {
           <p className={styles.name}>Linus Torvalds</p>
           <p className={styles.text}>Linux kernel creator, hacker, 1969</p>
           <div className={styles.choice}>
-            <Link to="/test" className={styles.link}>
+            <Link
+              onClick={() => setType({ testType: "tech" })}
+              to="/test"
+              className={styles.link}
+            >
               QA technical training
+              <ArrowIcon className={styles.icon} width="24" height="24" fill="white"/>
             </Link>
-            <Link to="/test" className={styles.link}>
+            <Link
+              onClick={() => setType({ testType: "theory" })}
+              to="/test"
+              className={styles.link}
+            >
               Testing theory
+              <ArrowIcon className={styles.icon} width="24" height="24" fill="white"/>
             </Link>
           </div>
         </div>
