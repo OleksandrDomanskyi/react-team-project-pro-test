@@ -5,7 +5,7 @@ import Moldovan from '../../images/team/Moldovan.jpg'
 import Khomenko from '../../images/team/Khomenko.jpg'
 import Kikot from '../../images/team/Kikot.jpg'
 import Rubakha from '../../images/team/Rubakha.jpg'
-// import Liamzyn from '../../images/team/Liamzyn.jpg'
+import Liamzyn from '../../images/team/Liamzyn.jpg'
 
 const teamData = [
     {
@@ -50,9 +50,9 @@ const teamData = [
         name:"Oleksii Kikot",
         role:'Front-End developer',
         social: {
-            linkedin:'https://www.linkedin.com/',
+            linkedin:'https://www.linkedin.com/in/oleksii-kikot-b12960241/',
             github:'https://github.com/alxkkt',
-            mail:'oleksii.kikot@yahoo.com',
+            mail:'kikot.oleksii@gmail.com',
         },
     },
 
@@ -93,7 +93,7 @@ const teamData = [
     },
     {
         id:7,
-        // img:Liamzyn,
+        img:Liamzyn,
         name:'Bohdan Liamzyn',
         role:'Front-End developer',
         social: {
