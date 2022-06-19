@@ -9,6 +9,7 @@ import { fetchQuestions } from "../../redux/test/test-operations";
 import { getTest } from "../../redux/test/test-selectors";
 import getResults from "../../redux/results/results-operations";
 import styles from "./test.module.scss";
+import Loader from "../../shared/components/Loader";
 
 const testTypes = ["tech", "theory"];
 const Test = () => {
@@ -134,9 +135,11 @@ const Test = () => {
               className={styles.btn_finish}
             />
           </div>
-          {!questions.loading && <p>Sorry</p>}
+          {!questions.loading && (
+            <p>Sorry, no questions for now. Try again later 🙄 </p>
+          )}
         </div>
-        {questions.loading && <p>...loading</p>}
+        {questions.loading && <Loader />}
       </main>
     );
   }
@@ -205,7 +208,7 @@ const Test = () => {
           <Toaster />
         </div>
       </div>
-      {questions.loading && <p>...loading</p>}
+      {questions.loading && <Loader />}
     </main>
   );
 };
