@@ -2,7 +2,6 @@
   "name": "react-team-project-pro-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://oleksandrdomanskyi.github.io/react-team-project-pro-test/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -30,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "eslintConfig": {
     "extends": [
