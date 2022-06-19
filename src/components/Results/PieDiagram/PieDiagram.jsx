@@ -37,18 +37,19 @@ const DiagramPieChart = ({ result }) => {
         content={renderLegend}
         payload={[
           {
-            value: `${result.result} correct`,
+            value: `${result.result || 0} correct`,
             color: "#FF6B01",
             type: "square",
           },
           {
-            value: `${100 - parseFloat(result.result)}% incorrect`,
+            value: `${100 - parseFloat(result.result) || 0}% incorrect`,
             color: "#D7D7D7",
             type: "square",
           },
         ]}
       ></Legend>
       <Pie
+        paddingAngle={0}
         align="center"
         data={data}
         dataKey="answers"
