@@ -1,11 +1,11 @@
 import UsefulInfo from "../../components/UsefulInfo";
 
 const UsefulInfoPage = () => {
-    return (
-        <div>
-            <UsefulInfo />
-        </div>
-    )
+  return (
+    <>
+      <UsefulInfo />
+    </>
+  );
 };
 
 export default UsefulInfoPage;

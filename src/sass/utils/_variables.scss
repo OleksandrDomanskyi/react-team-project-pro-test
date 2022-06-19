@@ -10,6 +10,7 @@
   --footer-background-color: #02172a;
   --footer-text-color: rgba(255, 255, 255, 0.4);
   --auth-form-bg-color: #fff;
+  --button-hover-color: rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] {
@@ -19,4 +20,5 @@
   --hero-text-decoration-color: white;
   --hero-description-color: rgb(152, 152, 152);
   --auth-form-bg-color: hsl(209, 43%, 10%);
+  --button-hover-color: rgb(238, 238, 238);
 }

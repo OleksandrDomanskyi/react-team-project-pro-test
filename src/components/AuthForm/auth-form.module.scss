@@ -28,33 +28,6 @@
   }
 }
 
-.Google {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
-
-  margin-left: 10px;
-}
-
-// .GoogleButton {
-//   border: transparent;
-//   background-color: #fafafa;
-//   margin: 32px 0;
-//   cursor: pointer;
-
-//   display: flex;
-//   align-items: center;
-
-//   padding: 17px 38px;
-
-//   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-// }
-.GoogleButton2 {
-  margin: 32px 0;
-}
-
 .inputs {
   margin: 32px 0;
 }
@@ -66,7 +39,7 @@
   line-height: 17px;
   letter-spacing: 0.02em;
 
-  color: #bbbbbb;
+  color: var(--text-color);
 
   padding: 20px 25px;
 
@@ -80,6 +53,16 @@
 
   background-color: transparent;
   border: 1px solid #ced2d1;
+
+  &:hover {
+    border-color: var(--accent-color);
+
+    transition: all 250ms ease-in-out;
+  }
+
+  &:focus {
+    outline: var(--accent-color) 1px solid;
+  }
 }
 
 .inputItem + .inputItem {
@@ -89,6 +72,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .signButton {
   background-color: transparent;
   border: 1px solid #ced2d1;
@@ -104,6 +88,15 @@
   @include desktop {
     width: 210px;
   }
+
+  &:hover {
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px var(--button-hover-color);
+    -webkit-box-shadow: 0px 0px 8px 1px var(--button-hover-color);
+    -moz-box-shadow: 0px 0px 8px 1px var(--button-hover-color);
+  }
+
+  transition: all 250ms ease-in-out;
 }
 
 .sign {

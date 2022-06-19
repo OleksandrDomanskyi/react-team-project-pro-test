@@ -9,7 +9,13 @@
 
   @include desktop {
     display: flex;
-    padding: 100px 124px;
+    padding: 80px 124px;
+  }
+}
+
+.mainContainer {
+  @include desktop {
+    height: 100vh;
   }
 }
 
