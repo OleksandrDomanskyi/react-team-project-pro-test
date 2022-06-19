@@ -25,6 +25,28 @@ export const login = createAsyncThunk(
   }
 );
 
+export const getCurrentUser = createAsyncThunk(
+    "auth/current",
+    async (_, { rejectWithValue, getState }) => {
+        try {
+            const { user } = getState();
+            const { accessToken } = user;
+            const data = await services.getCurrent(accessToken);
+            return data;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+  },
+  {
+      condition: (_, { getState }) => {
+      const { user } = getState();
+      if (!user.accessToken) {
+        return false;
+      }
+    },
+    }
+);
+
 export const logout = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
