@@ -1,12 +1,7 @@
 import { useState } from "react";
 
-import Login from "../Login/Login";
-import Logout from "../Logout/Logout";
-
 import { initialState } from './initialState';
 import styles from './auth-form.module.scss'
-
-// import Icon from "../../shared/components/Icon";
 
 const AuthForm = ({ onSubmit }) => {
     const [submitType, setSubmitType] = useState(null)
@@ -30,21 +25,8 @@ const AuthForm = ({ onSubmit }) => {
 
     return (
             <form className={styles.form} onSubmit={handleSubmit}>
-
-            <p className={styles.text}>You can use your Google Account to authorize:</p>
-
-            <div  className={styles.GoogleButton2}>
-                <Login />
-                <br/>
-                <Logout/>
-            </div>
-
-                {/* <button type='button' className={styles.GoogleButton}>
-                    <Icon name={"google"} width={18} height={18} /> 
-                    <span className={styles.Google}>Google</span>
-                </button> */}
                 
-                <p className={styles.text}>Or login to our app using e-mail and password:</p>
+                <p className={styles.text}>Login to our app using e-mail and password:</p>
 
                 <div className={styles.inputs}>
                     <div className={styles.inputItem}>
