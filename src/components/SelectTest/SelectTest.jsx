@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useCallback, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
+import ArrowIcon from './ArrowIcon/ArrowIcon';
+
 import testType from "../../redux/test/test-actions";
 import styles from "./select-test.module.scss";
 
@@ -37,6 +39,7 @@ const SelectTest = () => {
               className={styles.link}
             >
               QA technical training
+              <ArrowIcon className={styles.icon} width="24" height="24" fill="white"/>
             </Link>
             <Link
               onClick={() => setType({ testType: "theory" })}
@@ -44,6 +47,7 @@ const SelectTest = () => {
               className={styles.link}
             >
               Testing theory
+              <ArrowIcon className={styles.icon} width="24" height="24" fill="white"/>
             </Link>
           </div>
         </div>

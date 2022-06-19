@@ -132,3 +132,15 @@
     background-color: var(--accent-color);
   }
 }
+
+.icon {
+  margin-top: 28px;
+
+  @include tablet {
+    margin-top: 12px;
+  }
+
+  @include desktop {
+    margin-top: 8px;
+  }
+}
