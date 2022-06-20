@@ -43,12 +43,12 @@
         &::after {
             content: ' ';
             display: block;
-            margin: 32px 55px 32px 46px;
+            margin: 32px auto 32px auto;
             width: 130px;
             opacity: 0.15;
             border-bottom: 1px solid #00122F;
             @include tablet {
-                margin: 28px 111px 40px 102px;
+                margin: 28px auto 40px auto;
                 width: 336px;
             }
         }
