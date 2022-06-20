@@ -5,7 +5,7 @@ import Moldovan from '../../images/team/Moldovan.jpg'
 import Khomenko from '../../images/team/Khomenko.jpg'
 import Kikot from '../../images/team/Kikot.jpg'
 import Rubakha from '../../images/team/Rubakha.jpg'
-// import Liamzyn from '../../images/team/Liamzyn.jpg'
+import Liamzyn from '../../images/team/Liamzyn.jpg'
 
 const teamData = [
     {
@@ -93,13 +93,13 @@ const teamData = [
     },
     {
         id:7,
-        // img:Liamzyn,
+        img:Liamzyn,
         name:'Bohdan Liamzyn',
         role:'Project mentor',
         social: {
             linkedin:'https://www.linkedin.com/',
             github:'https://github.com/BogdanLyamzin',
-            mail:'',
+            mail:'bogdan.lyamzin.d@gmail.com',
         },
     }
     

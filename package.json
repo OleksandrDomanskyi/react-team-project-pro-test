@@ -2,7 +2,6 @@
   "name": "react-team-project-pro-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://oleksandrdomanskyi.github.io/react-team-project-pro-test/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -15,7 +14,6 @@
     "react": "^18.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.1.0",
-    "react-google-login": "^5.2.2",
     "react-hot-toast": "^2.2.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
@@ -23,6 +21,7 @@
     "react-toggle-dark-mode": "^1.0.4",
     "recharts": "^2.1.10",
     "redux-persist": "^6.0.0",
+    "spinners-react": "^1.0.7",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },
@@ -30,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "eslintConfig": {
     "extends": [
