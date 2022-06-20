@@ -10,7 +10,7 @@
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: #000000;
+  color: var(--text-color);
   @media screen and (min-width: 768px) {
     font-size: 22px;
     line-height: 27px;
@@ -30,11 +30,11 @@
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--text-color);
   margin-top: 12px;
   padding-bottom: 16px;
   width: 130px;
-  border-bottom: 1px solid rgba(0, 18, 47, 0.15);
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 18px;
   @media screen and (min-width: 768px) {
     margin-bottom: 40px;
@@ -83,7 +83,7 @@
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: #000000;
+  color: var(--text-color);
   margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -117,5 +117,5 @@
   }
 }
 .wrong {
-  text-align:center;
+  text-align: center;
 }

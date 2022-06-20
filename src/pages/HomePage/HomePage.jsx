@@ -1,11 +1,11 @@
 import SelectTest from "../../components/SelectTest";
 
 const HomePage = () => {
-    return (
-        <div>
-            <SelectTest />
-        </div>
-    )
+  return (
+    <>
+      <SelectTest />
+    </>
+  );
 };
 
 export default HomePage;

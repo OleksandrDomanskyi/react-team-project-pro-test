@@ -22,7 +22,6 @@ const ContactCard = ({ img = defaultIMG, name, role, social }) => {
 export default ContactCard;
 
 ContactCard.propTypes = {
-  img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
   social: PropTypes.shape({

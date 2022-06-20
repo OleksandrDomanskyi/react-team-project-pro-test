@@ -4,11 +4,11 @@
   content: "";
   position: absolute;
   display: block;
-  background-color: #00122f;
+
   top: 54px;
   width: 150px;
   opacity: 0.15;
-  border: 0.5px solid #00122f;
+  border: 0.5px solid var(--border-color);
   margin-top: 118px;
   @include tablet {
     margin-top: 252px;
@@ -24,11 +24,10 @@
   content: "";
   position: absolute;
   display: block;
-  background-color: #00122f;
 
   width: 150px;
   opacity: 0.15;
-  border: 0.5px solid #00122f;
+  border: 0.5px solid var(--border-color);
   margin-top: 242px;
   @include tablet {
     margin-top: 344px;
@@ -113,7 +112,6 @@
     margin-top: 24px;
   }
   @include desktop {
-    
     padding-left: 80px;
   }
 }
@@ -125,7 +123,7 @@
   line-height: 1.6;
   max-width: 207px;
   letter-spacing: 0.02em;
-  color:var(--text-color);
+  color: var(--text-color);
   @include tablet {
     font-weight: 500;
     font-size: 14px;
@@ -143,8 +141,8 @@
   max-width: 205px;
   width: max-content;
   text-decoration: underline;
-  
-  color:var(--text-color);
+
+  color: var(--text-color);
   @include tablet {
     font-weight: 500;
     font-size: 14px;
@@ -152,38 +150,27 @@
   }
 }
 
-// color: var(--text-color);
 .literatureLink {
   &:visited {
-   
-    color:var(--text-color);
+    color: var(--text-color);
   }
   &:hover {
-  
-    color:var(--text-color);
+    color: var(--text-color);
   }
   &:active {
-    
-    color:var(--text-color);
+    color: var(--text-color);
   }
-
-  
-  color:var(--text-color);
+  color: var(--text-color);
 }
 .resourceLink {
   &:visited {
-    
-    color:var(--text-color);
+    color: var(--text-color);
   }
   &:hover {
-    
-    color:var(--text-color);
+    color: var(--text-color);
   }
   &:active {
-    
-    color:var(--text-color);
+    color: var(--text-color);
   }
-
- 
-  color:var(--text-color);
+  color: var(--text-color);
 }
